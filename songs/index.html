@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Songs · Chester Bennington</title>
+  
+  <link href="https://fonts.googleapis.com/css2?family=Tektur:wght@800&family=Lunasima:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../style.css">
+  <link rel="stylesheet" href="../vars.css">
+</head>
+<body class="songs-page">
+  
+  <div class="songs-container">
+    
+    <header class="songs-header">
+      <h1 class="songs-title">His Voice</h1>
+    </header>
+    
+    <section class="audio-player-section">
+      <div class="now-playing" id="nowPlaying">Select a song</div>
+      
+      <audio id="audioPlayer" preload="metadata">
+        <source src="" type="audio/mpeg">
+      </audio>
+      
+      <div class="player-controls">
+        <button class="player-btn" id="prevBtn">⏮ Prev</button>
+        <button class="player-btn" id="playBtn">▶ Play</button>
+        <button class="player-btn" id="nextBtn">⏭ Next</button>
+      </div>
+      
+      <div class="progress-container" id="progressContainer">
+        <div class="progress-bar" id="progressBar"></div>
+      </div>
+      
+      <div class="time-display">
+        <span id="currentTime">0:00</span>
+        <span id="duration">0:00</span>
+      </div>
+    </section>
+    
+    <section class="playlist">
+      <h2 class="playlist-title">Playlist</h2>
+      
+      <div class="song-list" id="playlist">
+        <div class="song-item" data-src="../audio/Linkin_Park_-_In_The_End_47828874.mp3" data-name="In the End" data-album="Hybrid Theory (2000)">
+          <div class="song-info">
+            <span class="song-name">In the End</span>
+            <span class="song-album">Hybrid Theory · 2000</span>
+          </div>
+          <span class="song-duration">3:36</span>
+        </div>
+        
+        <div class="song-item" data-src="../audio/Linkin_Park_-_Numb_47828673.mp3" data-name="Numb" data-album="Meteora (2003)">
+          <div class="song-info">
+            <span class="song-name">Numb</span>
+            <span class="song-album">Meteora · 2003</span>
+          </div>
+          <span class="song-duration">3:07</span>
+        </div>
+        
+        <div class="song-item" data-src="../audio/Linkin_Park_-_Crawling_47828871.mp3" data-name="Crawling" data-album="Hybrid Theory (2000)">
+          <div class="song-info">
+            <span class="song-name">Crawling</span>
+            <span class="song-album">Hybrid Theory · 2000</span>
+          </div>
+          <span class="song-duration">3:29</span>
+        </div>
+        
+        <div class="song-item" data-src="../audio/Linkin_Park_-_What_Ive_Done_47894351.mp3" data-name="What I've Done" data-album="Minutes to Midnight (2007)">
+          <div class="song-info">
+            <span class="song-name">What I've Done</span>
+            <span class="song-album">Minutes to Midnight · 2007</span>
+          </div>
+          <span class="song-duration">3:25</span>
+        </div>
+        
+        <div class="song-item" data-src="../audio/Linkin_Park_-_One_More_Light_47828971.mp3" data-name="One More Light" data-album="One More Light (2017)">
+          <div class="song-info">
+            <span class="song-name">One More Light</span>
+            <span class="song-album">One More Light · 2017</span>
+          </div>
+          <span class="song-duration">4:15</span>
+        </div>
+        
+        <div class="song-item" data-src="../audio/Linkin_Park_-_Breaking_The_Habit_47828669.mp3" data-name="Heavy" data-album="One More Light (2017)">
+          <div class="song-info">
+            <span class="song-name">Breaking The Habit</span>
+            <span class="song-album">Meteora · 2003</span>
+          </div>
+          <span class="song-duration">2:49</span>
+        </div>
+    
+      <div class="song-item" data-src="../audio/Linkin_Park_-_New_Divide_47894349.mp3" data-name="New Divide" data-album="Transformers: Revenge of the Fallen — The Album">
+        <div class="song-info">
+          <span class="song-name">New Divide</span>
+          <span class="song-album">Transformers: Revenge of the Fallen — The Album · 2009</span>
+        </div>
+        <span class="song-duration">2:49</span>
+      </div>
+
+
+    <div class="song-item" data-src="../audio/Linkin_Park_-_Lost_75941129.mp3" data-name="Lost" data-album="Meteora">
+      <div class="song-info">
+        <span class="song-name">Lost</span>
+        <span class="song-album">Meteora · 2003</span>
+      </div>
+      <span class="song-duration">4:15</span>
+    </div>
+
+    <div class="song-item" data-src="../audio/Linkin_Park_-_And_One_71198391.mp3" data-name="And One" data-album="Hybrid Theory">
+      <div class="song-info">
+        <span class="song-name">And One</span>
+        <span class="song-album">Hybrid Theory · 2000</span>
+      </div>
+      <span class="song-duration">4:15</span>
+    </div>
+
+    <div class="song-item" data-src="../audio/Linkin_Park_-_Bleed_It_Out_79474828.mp3" data-name="Bleed It Out" data-album="Minutes to Midnight">
+      <div class="song-info">
+        <span class="song-name">Blees It Out</span>
+        <span class="song-album">Minutes to Midnight · 2007</span>
+      </div>
+      <span class="song-duration">4:15</span>
+    </div>
+
+    <div class="song-item" data-src="../audio/Linkin_Park_-_Iridescent_47894347.mp3" data-name="Iridescent" data-album="A Thousand Suns">
+      <div class="song-info">
+        <span class="song-name">Iridescent</span>
+        <span class="song-album">A Thousand Suns · 2010</span>
+      </div>
+      <span class="song-duration">4:15</span>
+    </div>
+
+    <div class="song-item" data-src="../audio/Linkin_Park_-_One_Step_Closer_76017875.mp3" data-name="One Step Closer" data-album="Hybrid Theory">
+      <div class="song-info">
+        <span class="song-name">One Step Closer</span>
+        <span class="song-album">Hybrid Theory · 2000</span>
+      </div>
+      <span class="song-duration">4:15</span>
+    </div>
+
+  </div>
+    
+    </section>
+    
+    <a href="../index.html" class="back-link">← Back to Home</a>
+    
+  </div>
+  
+  <script src="../js/script.js"></script>
+</body>
+</html>
