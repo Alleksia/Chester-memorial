@@ -1,0 +1,595 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Biography · Chester Bennington</title>
+  
+  <link href="https://fonts.googleapis.com/css2?family=Tektur:wght@800&family=Lunasima:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../vars.css">
+  <link rel="stylesheet" href="../style.css">
+  
+  <style>
+    .bio-page {
+      background: var(--bacground2);
+    }
+    
+    .bio-wrapper {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 2rem 1.5rem 4rem;
+    }
+    
+    .bio-page-title {
+      text-align: center;
+      margin-bottom: 4rem;
+      position: relative;
+    }
+    
+    .bio-page-title h1 {
+      color: #ffffff;
+      font-family: var(--akcent-font-family);
+      font-size: clamp(3.5rem, 12vw, 100px);
+      font-weight: var(--akcent-font-weight);
+      letter-spacing: var(--akcent-letter-spacing);
+      text-transform: uppercase;
+      position: relative;
+      z-index: 2;
+    }
+    
+    .cross-red {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      width: 80%;
+      height: 4px;
+      background: var(--akcent-color);
+      transform: translate(-50%, -50%) rotate(-35deg);
+      opacity: 0.2;
+      z-index: 1;
+    }
+    
+    .cross-blue {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      width: 80%;
+      height: 4px;
+      background: var(--akcen5);
+      transform: translate(-50%, -50%) rotate(35deg);
+      opacity: 0.2;
+      z-index: 1;
+    }
+    
+    .bio-block {
+      display: flex;
+      flex-direction: column;
+      margin-bottom: 0;
+      opacity: 0;
+      transform: translateY(30px);
+      transition: opacity 0.8s ease, transform 0.8s ease;
+    }
+    
+    .bio-block.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+    
+    .bio-photo {
+      width: 100%;
+      max-height: 500px;
+      object-fit: cover;
+      filter: grayscale(1);
+      display: block;
+    }
+    
+    .bio-content {
+      background: var(--akcen8);
+      padding: 2.5rem;
+      border-left: 6px solid var(--akcent-color);
+    }
+    
+    .bio-content.blue-border {
+      border-left-color: var(--akcen5);
+    }
+    
+    .bio-content.black-border {
+      border-left-color: var(--akcen9);
+    }
+    
+    .bio-section-title {
+      color: var(--bacground);
+      font-family: var(--zagolovok-font-family);
+      font-size: var(--zagolovok-font-size);
+      margin-bottom: 1.5rem;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+    }
+    
+    .bio-text {
+      color: #e0e0e0;
+      font-family: var(--obychnyj-font-family);
+      font-size: clamp(1rem, 3vw, 1.2rem);
+      line-height: 1.8;
+    }
+    
+    .bio-text p {
+      margin-bottom: 1.2rem;
+    }
+    
+    .bio-text p:last-child {
+      margin-bottom: 0;
+    }
+    
+    .bio-highlight {
+      color: #ffffff;
+      font-weight: 700;
+    }
+    
+    .bio-quote {
+      font-style: italic;
+      color: var(--bacground);
+      padding: 1rem 2rem;
+      border-left: 4px solid var(--akcent-color);
+      background: rgba(0, 0, 0, 0.2);
+      margin: 1.5rem 0;
+    }
+    
+    .bio-divider {
+      width: 100%;
+      height: 2px;
+      background: linear-gradient(90deg, transparent, var(--akcen5), transparent);
+      margin: 0;
+    }
+    
+    .back-link {
+      display: inline-block;
+      margin-top: 3rem;
+      color: var(--bacground);
+      font-family: var(--obychnyj-font-family);
+      font-size: 1.2rem;
+      text-decoration: none;
+      border: 2px solid var(--akcen8);
+      padding: 0.8rem 2rem;
+      transition: all 0.25s;
+    }
+    
+    .back-link:hover {
+      background: var(--akcen8);
+      border-color: var(--akcent-color);
+    }
+    
+    @media (max-width: 768px) {
+      .bio-wrapper {
+        padding: 1rem 1rem 3rem;
+      }
+      
+      .bio-content {
+        padding: 1.5rem;
+      }
+    }
+  </style>
+</head>
+<body class="bio-page">
+  
+  <div class="bio-wrapper">
+    
+    <div class="bio-page-title">
+      <div class="cross-red"></div>
+      <div class="cross-blue"></div>
+      <h1>Biography</h1>
+    </div>
+    
+    <div class="bio-block" id="block1">
+      <img class="bio-photo" src="../images/image 1.png" alt="Young Chester Bennington" loading="lazy">
+      <div class="bio-content">
+        <h2 class="bio-section-title">Early Life</h2>
+        <div class="bio-text">
+          <p>
+            <span class="bio-highlight">Chester Charles Bennington</span> was born on 
+            <span class="bio-highlight">March 20, 1976</span> in Phoenix, Arizona. 
+            His mother was a nurse, and his father was a police detective who specialized 
+            in child sexual abuse cases. Chester attended Greenway High School.
+          </p>
+          <p>
+            From the moment he learned to talk, Chester told everyone he would grow up to be a singer. 
+            His older brother played Foreigner records constantly, and by age two, Chester was running 
+            around the house singing their songs. His mother recalls how he would perform all the parts 
+            from the 1980 musical "Popeye" for anyone who visited.
+          </p>
+          <p>
+            Chester's parents divorced when he was 11 years old. He was bullied at school and 
+            struggled with feelings of isolation. Music became his escape.
+          </p>
+        </div>
+      </div>
+    </div>
+    
+    <div class="bio-divider"></div>
+    
+    <div class="bio-block" id="block2">
+      <img class="bio-photo" src="../images/chester-teen.jpg" alt="Teenage Chester Bennington" loading="lazy">
+      <div class="bio-content blue-border">
+        <h2 class="bio-section-title">First Steps in Music</h2>
+        <div class="bio-text">
+          <p>
+            As Chester grew older, he developed his distinctive singing style. 
+          </p>
+          <div class="bio-quote">
+            "I did it all the wrong way. I basically went at it till it didn't hurt anymore. 
+            It's something I've been blessed with."
+          </div>
+          <p>
+            His favorite band was <span class="bio-highlight">Ministry</span>, and he tried to mimic 
+            Al Jourgensen's compressed vocals without effects. He also listened to 
+            <span class="bio-highlight">Depeche Mode</span>, <span class="bio-highlight">The Cure</span>, 
+            <span class="bio-highlight">The Misfits</span>, and <span class="bio-highlight">The Smiths</span>.
+          </p>
+          <p>
+            In high school, Chester got into musical theater and traveled the country with a stage 
+            production of "You Are The Child."
+          </p>
+        </div>
+      </div>
+    </div>
+    
+    <div class="bio-divider"></div>
+    
+    <div class="bio-block" id="block3">
+      <img class="bio-photo" src="../images/chester-grey-daze.jpg" alt="Chester Bennington in Grey Daze" loading="lazy">
+      <div class="bio-content">
+        <h2 class="bio-section-title">Grey Daze</h2>
+        <div class="bio-text">
+          <p>
+            In 1993, Chester joined the Phoenix-based band <span class="bio-highlight">Grey Daze</span> 
+            as lead vocalist. The band recorded two albums: <span class="bio-highlight">"Wake Me"</span> (1994) 
+            and <span class="bio-highlight">"...No Sun Today"</span> (1997).
+          </p>
+          <p>
+            Grey Daze built a strong local following in Arizona, but Chester grew frustrated with the 
+            band's lack of progress. He left Grey Daze in 1998, searching for greater opportunities.
+          </p>
+          <p>
+            Years later, after Chester's passing, the surviving members of Grey Daze completed and 
+            released unfinished recordings as a tribute album called <span class="bio-highlight">"Amends"</span> (2020).
+          </p>
+        </div>
+      </div>
+    </div>
+    
+    <div class="bio-divider"></div>
+    
+    <div class="bio-block" id="block4">
+      <img class="bio-photo" src="../images/image 5.png" alt="Early Linkin Park" loading="lazy">
+      <div class="bio-content black-border">
+        <h2 class="bio-section-title">The Birth of Linkin Park</h2>
+        <div class="bio-text">
+          <p>
+            In 1999, Chester received a call from Jeff Blue, a music executive who had seen his work with 
+            Grey Daze. Blue told him about a band called <span class="bio-highlight">Xero</span> that needed 
+            a new vocalist. Chester flew to Los Angeles and auditioned on his birthday.
+          </p>
+          <p>
+            He got the job immediately. The band changed their name from Xero to 
+            <span class="bio-highlight">Hybrid Theory</span>, and finally to 
+            <span class="bio-highlight">Linkin Park</span> — a nod to Lincoln Park in Santa Monica.
+          </p>
+          <p>
+            The lineup was complete: Chester Bennington (vocals), Mike Shinoda (vocals/rap/guitar), 
+            Brad Delson (guitar), Dave "Phoenix" Farrell (bass), Joe Hahn (turntables), and Rob Bourdon (drums).
+          </p>
+        </div>
+      </div>
+    </div>
+    
+    <div class="bio-divider"></div>
+    
+    <div class="bio-block" id="block5">
+      <img class="bio-photo" src="../images/hybrid-theory.jpg" alt="Hybrid Theory album era" loading="lazy">
+      <div class="bio-content">
+        <h2 class="bio-section-title">Hybrid Theory · 2000</h2>
+        <div class="bio-text">
+          <p>
+            On October 24, 2000, Linkin Park released their debut album 
+            <span class="bio-highlight">"Hybrid Theory"</span>. The album was a massive success, 
+            selling over 4.8 million copies in its first year and becoming the best-selling album 
+            of 2001 in the United States.
+          </p>
+          <p>
+            Singles like <span class="bio-highlight">"One Step Closer"</span>, 
+            <span class="bio-highlight">"Crawling"</span>, <span class="bio-highlight">"Papercut"</span>, 
+            and <span class="bio-highlight">"In the End"</span> dominated radio and MTV. 
+            Chester's raw screams and vulnerable melodies became the voice of a generation struggling 
+            with alienation and pain.
+          </p>
+          <p>
+            "Crawling" won a <span class="bio-highlight">Grammy Award</span> for Best Hard Rock Performance in 2002.
+          </p>
+        </div>
+      </div>
+    </div>
+    
+    <div class="bio-divider"></div>
+    
+    <div class="bio-block" id="block6">
+      <img class="bio-photo" src="../images/meteora.jpg" alt="Meteora era" loading="lazy">
+      <div class="bio-content blue-border">
+        <h2 class="bio-section-title">Meteora · 2003</h2>
+        <div class="bio-text">
+          <p>
+            The follow-up album <span class="bio-highlight">"Meteora"</span> was released on March 25, 2003. 
+            It debuted at #1 on the Billboard 200 and sold over 810,000 copies in its first week.
+          </p>
+          <p>
+            Hit singles included <span class="bio-highlight">"Somewhere I Belong"</span>, 
+            <span class="bio-highlight">"Faint"</span>, <span class="bio-highlight">"Numb"</span>, 
+            <span class="bio-highlight">"Breaking the Habit"</span>, and 
+            <span class="bio-highlight">"From the Inside"</span>. 
+            "Numb" became one of the band's most iconic songs, with over 2 billion views on YouTube.
+          </p>
+          <p>
+            During the Meteora era, Chester struggled with health issues, including severe abdominal 
+            pain that required surgery while filming the "Numb" music video in Prague.
+          </p>
+        </div>
+      </div>
+    </div>
+    
+    <div class="bio-divider"></div>
+    
+    <div class="bio-block" id="block7">
+      <img class="bio-photo" src="../images/minutes-to-midnight.jpg" alt="Minutes to Midnight era" loading="lazy">
+      <div class="bio-content">
+        <h2 class="bio-section-title">Minutes to Midnight · 2007</h2>
+        <div class="bio-text">
+          <p>
+            After a long break, Linkin Park returned with <span class="bio-highlight">"Minutes to Midnight"</span> 
+            on May 14, 2007. The album showed a more mature, politically conscious sound.
+          </p>
+          <p>
+            Lead single <span class="bio-highlight">"What I've Done"</span> became an anthem for 
+            environmental awareness. Other hits included <span class="bio-highlight">"Bleed It Out"</span>, 
+            <span class="bio-highlight">"Shadow of the Day"</span>, and 
+            <span class="bio-highlight">"Leave Out All the Rest"</span>.
+          </p>
+          <p>
+            In October 2007, Chester broke his wrist during a show in Melbourne but continued to 
+            perform the entire set before going to the hospital.
+          </p>
+        </div>
+      </div>
+    </div>
+    
+    <div class="bio-divider"></div>
+    
+    <div class="bio-block" id="block8">
+      <img class="bio-photo" src="../images/dead-by-sunrise.jpg" alt="Dead By Sunrise" loading="lazy">
+      <div class="bio-content black-border">
+        <h2 class="bio-section-title">Dead By Sunrise · 2009</h2>
+        <div class="bio-text">
+          <p>
+            Chester formed his side project <span class="bio-highlight">Dead By Sunrise</span> in 2005 
+            with members of Julien-K. The band's debut album <span class="bio-highlight">"Out of Ashes"</span> 
+            was released on October 13, 2009.
+          </p>
+          <p>
+            The album was deeply personal, written during Chester's divorce and struggles with 
+            alcoholism. Singles included <span class="bio-highlight">"Crawl Back In"</span> and 
+            <span class="bio-highlight">"Let Down"</span>.
+          </p>
+        </div>
+      </div>
+    </div>
+    
+    <div class="bio-divider"></div>
+  
+    <div class="bio-block" id="block9">
+      <img class="bio-photo" src="../images/thousand-suns.jpg" alt="A Thousand Suns era" loading="lazy">
+      <div class="bio-content">
+        <h2 class="bio-section-title">A Thousand Suns · 2010</h2>
+        <div class="bio-text">
+          <p>
+            <span class="bio-highlight">"A Thousand Suns"</span> was released on September 8, 2010. 
+            It was a concept album about nuclear warfare and human conflict.
+          </p>
+          <p>
+            Singles included <span class="bio-highlight">"The Catalyst"</span>, 
+            <span class="bio-highlight">"Waiting for the End"</span>, 
+            <span class="bio-highlight">"Burning in the Skies"</span>, and 
+            <span class="bio-highlight">"Iridescent"</span>, which was featured in 
+            "Transformers: Dark of the Moon."
+          </p>
+        </div>
+      </div>
+    </div>
+    
+    <div class="bio-divider"></div>
+    
+    <div class="bio-block" id="block10">
+      <img class="bio-photo" src="../images/living-things.jpg" alt="Living Things era" loading="lazy">
+      <div class="bio-content blue-border">
+        <h2 class="bio-section-title">Living Things · 2012</h2>
+        <div class="bio-text">
+          <p>
+            <span class="bio-highlight">"Living Things"</span> was released on June 20, 2012. 
+            The album blended the electronic elements of "A Thousand Suns" with the heavier rock 
+            sound of their earlier work.
+          </p>
+          <p>
+            Singles included <span class="bio-highlight">"Burn It Down"</span>, 
+            <span class="bio-highlight">"Lost in the Echo"</span>, and 
+            <span class="bio-highlight">"Castle of Glass"</span>.
+          </p>
+        </div>
+      </div>
+    </div>
+    
+    <div class="bio-divider"></div>
+    
+    <div class="bio-block" id="block11">
+      <img class="bio-photo" src="../images/chester-stp.jpg" alt="Chester with Stone Temple Pilots" loading="lazy">
+      <div class="bio-content">
+        <h2 class="bio-section-title">Stone Temple Pilots · 2013–2015</h2>
+        <div class="bio-text">
+          <p>
+            In May 2013, Chester joined <span class="bio-highlight">Stone Temple Pilots</span> 
+            as their new lead vocalist, replacing the late Scott Weiland. He recorded the EP 
+            <span class="bio-highlight">"High Rise"</span> with the band, which included the single 
+            <span class="bio-highlight">"Out of Time"</span>.
+          </p>
+          <p>
+            Chester left Stone Temple Pilots amicably in November 2015 to focus on Linkin Park.
+          </p>
+        </div>
+      </div>
+    </div>
+    
+    <div class="bio-divider"></div>
+    
+    <div class="bio-block" id="block12">
+      <img class="bio-photo" src="../images/hunting-party.jpg" alt="The Hunting Party era" loading="lazy">
+      <div class="bio-content black-border">
+        <h2 class="bio-section-title">The Hunting Party · 2014</h2>
+        <div class="bio-text">
+          <p>
+            <span class="bio-highlight">"The Hunting Party"</span> was released on June 13, 2014. 
+            It marked a return to the band's heavier rock roots, featuring guest appearances from 
+            rock legends like Tom Morello, Page Hamilton, and Daron Malakian.
+          </p>
+          <p>
+            Singles included <span class="bio-highlight">"Guilty All the Same"</span>, 
+            <span class="bio-highlight">"Until It's Gone"</span>, and 
+            <span class="bio-highlight">"Final Masquerade"</span>.
+          </p>
+        </div>
+      </div>
+    </div>
+    
+    <div class="bio-divider"></div>
+    
+    <div class="bio-block" id="block13">
+      <img class="bio-photo" src="../images/one-more-light.jpg" alt="One More Light era" loading="lazy">
+      <div class="bio-content">
+        <h2 class="bio-section-title">One More Light · 2017</h2>
+        <div class="bio-text">
+          <p>
+            Linkin Park's seventh album <span class="bio-highlight">"One More Light"</span> was released 
+            on May 19, 2017. It featured a more pop-oriented sound and deeply personal lyrics.
+          </p>
+          <p>
+            The title track <span class="bio-highlight">"One More Light"</span> was written after the 
+            death of a friend at the band's record label. Chester struggled to perform it without 
+            breaking down.
+          </p>
+          <p>
+            Just two months after the album's release, Chester was gone.
+          </p>
+        </div>
+      </div>
+    </div>
+    
+    <div class="bio-divider"></div>
+    
+    <div class="bio-block" id="block14">
+      <img class="bio-photo" src="../images/image 9.png" alt="Chester and Chris Cornell" loading="lazy">
+      <div class="bio-content blue-border">
+        <h2 class="bio-section-title">Friendship with Chris Cornell</h2>
+        <div class="bio-text">
+          <p>
+            Chester was incredibly close with <span class="bio-highlight">Chris Cornell</span> of 
+            Soundgarden and Audioslave. They became friends during a tour in the mid-2000s. 
+            Chester was the godfather of Chris's son Christopher.
+          </p>
+          <p>
+            When Chris died by suicide on May 18, 2017, Chester was devastated. He wrote an open 
+            letter saying he couldn't imagine a world without Chris in it. He performed 
+            <span class="bio-highlight">"Hallelujah"</span> at Chris's funeral.
+          </p>
+        </div>
+      </div>
+    </div>
+    
+    <div class="bio-divider"></div>
+    
+    <div class="bio-block" id="block15">
+      <img class="bio-photo" src="../images/image 7.png" alt="Chester with family" loading="lazy">
+      <div class="bio-content">
+        <h2 class="bio-section-title">Family & Personal Life</h2>
+        <div class="bio-text">
+          <p>
+            Chester had six children. His first son, Jaime, was born in 1996. He married his first 
+            wife, Samantha Olit, in 1996, and they had a son named Draven in 2002. The couple divorced 
+            in 2005.
+          </p>
+          <p>
+            In 2005, Chester married <span class="bio-highlight">Talinda Bentley</span>, a former 
+            Playboy model. They had three children together: Tyler (2006) and twins Lily and Lila (2011). 
+            He also adopted his ex-partner's son, Isaiah.
+          </p>
+          <p>
+            Chester was a tattoo enthusiast with dozens of tattoos, many representing his struggles 
+            and triumphs. He was an avid fan of the Phoenix Suns, Arizona Cardinals, and Arizona 
+            Diamondbacks.
+          </p>
+        </div>
+      </div>
+    </div>
+    
+    <div class="bio-divider"></div>
+    
+    <div class="bio-block" id="block16">
+      <img class="bio-photo" src="../images/image 6.png" alt="Chester Bennington memorial" loading="lazy">
+      <div class="bio-content black-border">
+        <h2 class="bio-section-title">The Battle Within</h2>
+        <div class="bio-text">
+          <p>
+            Throughout his life, Chester struggled with <span class="bio-highlight">depression</span>, 
+            <span class="bio-highlight">anxiety</span>, and <span class="bio-highlight">substance abuse</span>. 
+            He was sexually abused as a child by an older friend, a trauma he carried for years 
+            before revealing it publicly.
+          </p>
+          <p>
+            He battled alcoholism multiple times, undergoing interventions and treatment. Despite his 
+            inner demons, he used his platform to help others, becoming a voice for those who felt 
+            voiceless.
+          </p>
+        </div>
+      </div>
+    </div>
+    
+    <div class="bio-divider"></div>
+    
+    <div class="bio-block" id="block17">
+      <img class="bio-photo" src="../images/chester-legacy.jpg" alt="Chester Bennington legacy" loading="lazy">
+      <div class="bio-content">
+        <h2 class="bio-section-title">Legacy</h2>
+        <div class="bio-text">
+          <p>
+            On <span class="bio-highlight">July 20, 2017</span> — what would have been Chris Cornell's 
+            53rd birthday — Chester Charles Bennington died by suicide at his home in Palos Verdes 
+            Estates, California. He was 41 years old.
+          </p>
+          <div class="bio-quote">
+            "Who cares if one more light goes out? Well I do."
+          </div>
+          <p>
+            Chester's voice touched millions. His honesty about mental health inspired countless fans 
+            to seek help. Linkin Park's music continues to resonate with new generations. In 2024, 
+            the band announced their return with new vocalist Emily Armstrong, ensuring Chester's 
+            legacy lives on.
+          </p>
+          <p>
+            <span class="bio-highlight">Chester Bennington · 1976–2017 · Forever in our hearts</span>
+          </p>
+          
+        </div>
+      </div>
+    </div>
+    
+    <a href="../index.html" class="back-link">← Back to Home</a>
+    
+  </div>
+  
+  <script src="../js/script.js"></script>
+</body>
+</html>
